@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="styleSheet" href="style.css">
+  <script src="script.js"></script>
+</head>
+
+<body>
+  <div id="overlay">
+    <img src="images/close.png" id="close">
+    <div id="overlay_cont"></div>
+    <div id="other_videos"
+      style="display:flex; width:100%; justify-content: center;gap:10px ;align-self: center; margin-top: 35px;"></div>
+  </div>
+  <div id="home">
+    <nav>
+      <input type="image" src="images/movie_logo.png" id="logo">
+      <ul id="center_links">
+        <li><a href="#" class="active">Home</a></li>
+        <li><a href="#pop" onclick="showTv();">TV_Shows</a></li>
+        <li><a href="#pop" onclick="showMovies();">Movies</a></li>
+        <li><a href="">Favorites</a></li>
+      </ul>
+      <div id="search_cont">
+        <div id="srch">
+          <input type="image" src="images/search.png" id="search_img">
+          <input type="text" id="search" placeholder="search for a movie" oninput="search_cards()">
+        </div>
+        <div id="desc_cont">
+
+        </div>
+      </div>
+      <img src="images/menu.png" id="menu">
+      <div id="side_bar" onmouseleave="hide_menu();">
+        <h3>menu</h3>
+        <ul id="menu_links">
+          <li><a href="#" class="active" onclick="active(this)">Home</a></li>
+          <li><a href="#pop" onclick="active(this); showTv();">TV_Shows</a></li>
+          <li><a href="#pop" onclick="active(this); showMovies();">Movies</a></li>
+          <li><a href="" onclick="active(this)">Favorites</a></li>
+        </ul>
+        <button>Sign in</button>
+      </div>
+      <button id="sign_in" class="red">Sign in</button>
+    </nav>
+    <div id="left_side">
+      <p id="date"></p>
+      <div id="rating">
+        <input type="image" src="images/star.png">
+        <span id="rate"></span>
+      </div>
+      <h1 id="name"></h1>
+      <p id="description" style="width: 70%;"></p>
+      <div id="buttons"><button class="red watch">
+          <input type="image" src="images/play.png">
+          &nbsp;Watch
+        </button>
+        <button id="list" class="grey">
+          <input type="image" src="images/plus.png">
+          &nbsp;List
+        </button>
+      </div>
+    </div>
+    <div id="dots">
+      <div class="dot" onclick="showImg(-1)"></div>
+      <div class="dot active" id="mid"></div>
+      <div class="dot" onclick="showImg(1)"></div>
+    </div>
+    <input type="image" src="" id="background">
+  </div>
+  <a name="pop">
+    <h2>Popular</h2>
+  </a>
+  <div>
+    <button class="red" style="margin-left:20px ; margin-right: 10px; margin-bottom: 15px;"
+      onclick="showMovies();">Movies</button>
+    <button class="grey" onclick="showTv();">Tv_Shows</button>
+  </div>
+
+  <div id="popular">
+
+  </div>
+  <h2>Favorites</h2>
+  <div id="favorites">
+
+  </div>
+  <h2>COMING SOON</h2>
+  <div id="upcoming">
+
+  </div>
+  <footer>
+    <img src="images/movie_logo-fotor-20231015152430.png">
+    <div id="center">
+      <ul>
+        <li><a href="">Home</a></li>
+        <li><a href="#pop" onclick="showTv();">TV_Shows</a></li>
+        <li><a href="#pop" onclick="showMovies();">Movies</a></li>
+        <li><a href="">Favorites</a></li>
+      </ul>
+      <div>
+        <p>hello@gmail.com</p>
+        <p>+96112345678</p>
+      </div>
+    </div>
+    <div id="right">
+      <div>
+        <img src="images/twitter.png" alt="">
+        <img src="images/facebook.png" alt="">
+        <img src="images/linkedin-logo.png" alt="">
+      </div>
+      <p>&copy; All rights are protected</p>
+    </div>
+
+  </footer>
+</body>
+
+</html>
